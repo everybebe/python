@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.4.js"></script>
+<script type="text/javascript">
+function myclick() {
+	var obj_it = $("#my_it");
+	var a = obj_it.val();
+	var aa = parseInt(a);
+	aa *=2;
+	$("#my_it").val(aa);
+	console.log("a",a,aa);
+}
+$(document).ready(function(){
+	
+	$("#btn").on("click",function(){
+		myclick()
+	})
+})
+	
+</script>
+</head>
+<body>
+<input type="text" id="my_it" value="10">
+<input type="button" id="btn" value="Double" onclick="myclick()">
+
+</body>
+
+
+</html>

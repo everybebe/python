@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#it{
+	text-align: right;
+}
+</style>
+<script type="text/javascript">
+
+function myclick() {
+
+	var first = parseInt(document.getElementById("it_first").value);
+	var last = parseInt(document.getElementById("it_last").value);
+	
+	console.log(first)
+	
+	var rs = "";
+	
+	for(var i=first; i<=last; i++) {
+		for(var j=0; j<i; j++){
+		rs += "*" ;
+	
+	}
+		rs += "\n";
+		document.getElementById("ta").value= rs;
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<td>첫별 수:</td>
+		<td>
+			<input type="text" id="it_first">		
+		</td>
+	</tr>
+	<tr>
+		<td>끝별 수:</td>
+		<td>
+			<input type="text" id="it_last">		
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="button" value="별출력하기" onclick="myclick()">
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+			<textarea id="ta" rows="20" cols="20"></textarea>
+		</td>
+	</tr>
+	
+	
+</table>
+
+</body>
+
+
+</html>

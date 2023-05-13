@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="jquery-3.6.4.js"></script>
+<style type="text/css">
+#it{
+	width: 30px;
+}
+#my_div{
+	height: 200px;
+}
+</style>
+<script src="jquery-3.6.4.js"></script>
+<script type="text/javascript">
+
+function myclick(){
+	
+	var arr45 = [
+		1,2,3,4,5, 6,7,8,9,10,
+		11,12,13,14,15, 16,17,18,19,20,
+		21,22,23,24,25, 26,27,28,29,30,
+		31,32,33,34,35, 36,37,38,39,40,
+		41,42,43,44,45		
+	];
+	
+	for(var i = 0; i<100; i++) {
+		var rnd = parseInt(Math.random()*45);
+		a = arr45[rnd];
+		b = arr45[0];
+		arr45[0] = a;
+		arr45[rnd] = b;
+		
+	}
+	
+
+	$(".my_td").eq('0').text(arr45[0]);
+	$(".my_td").eq('1').text(arr45[1]);
+	$(".my_td").eq('2').text(arr45[2]);
+	$(".my_td").eq('3').text(arr45[3]);
+	$(".my_td").eq('4').text(arr45[4]);
+	$(".my_td").eq('5').html(arr45[5]);
+}
+	
+	
+	
+
+$(document).ready(function(){
+
+	$("#btn").bind("click",myclick);
+}) 
+	
+</script>
+</head>
+<body>
+<table border='1'>
+	<tr>
+		<td class="my_td">__</td>
+		<td class="my_td">__</td>
+		<td class="my_td">__</td>
+		<td class="my_td">__</td>
+		<td class="my_td">__</td>
+		<td class="my_td">__</td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<input type="button" value="로또생성하기" id="btn">
+			
+		</td>
+	</tr>
+
+
+</table>
+</body>
+
+
+</html>

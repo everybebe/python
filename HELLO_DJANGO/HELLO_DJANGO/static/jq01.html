@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="jquery-3.6.4.js"></script>
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#btn").click(function(){
+		$(".my_div").html("Good Evening!");
+		
+	});
+})
+
+
+/* function myclick() {
+	$(".my_div").html("Good Evening");
+}
+$(document).ready(function(){
+	$("#btn").bind("click", myclick);
+})
+
+ */
+</script>
+</head>
+<body>
+<div class="my_div">GoodMorning</div>
+<input type="button" id="btn" value="CLICK">
+</body>
+
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#it{
+	text-align: right;
+}
+</style>
+<script type="text/javascript">
+
+num2 =""
+
+function myclick(num) {
+
+	num2 += num
+	
+	document.getElementById("it").value=num2
+
+}
+
+
+function call() {
+	
+	alert(num2);
+	
+}
+</script>
+</head>
+<body>
+<table border="1">
+
+	<tr>
+		<td colspan="3">
+			<input type="text" id="it" value=""></div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="button" value="1" onclick="myclick(1)"></td> <!--myclick(this)로 하면 function myclick(obj)로 해주면 됨  -->
+		<td><input type="button" value="2" onclick="myclick(2)"></td>
+		<td><input type="button" value="3" onclick="myclick(3)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="4" onclick="myclick(4)"></td>
+		<td><input type="button" value="5" onclick="myclick(5)"></td>
+		<td><input type="button" value="6" onclick="myclick(6)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" onclick="myclick(7)"></td>
+		<td><input type="button" value="8" onclick="myclick(8)"></td>
+		<td><input type="button" value="9" onclick="myclick(9)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="0" onclick="myclick(0)"></td>
+		<td colspan="2">
+			<input type="button" value="CALL" onclick="call()"> 
+		</td>
+	</tr>
+</table>
+
+</body>
+
+
+</html>

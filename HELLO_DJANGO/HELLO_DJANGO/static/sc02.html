@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function myclick() {
+	var obj_it = document.QuerySelector("#my_it");
+	var a = obj_it.value;
+	var aa = parseInt(a);
+	console.log("a",a,aa);
+}
+
+
+</script>
+</head>
+<body>
+<input type="text" id="my_it" value="10">
+<input type="button" value="Double" onclick="myclick()">
+
+</body>
+
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.4.js"></script>
+<style type="text/css">
+
+
+#it{
+	text-align: right;
+}
+</style>
+<script type="text/javascript">
+
+
+num = ""
+$(document).ready(function(){
+
+	$(".btn").on("click", function() {
+		num += $(this).val()
+		$("#it").val(num)
+	})
+
+	$("#myCall").on("click", function() {
+
+		alert(num);
+
+	})
+})
+
+</script>
+</head>
+<body>
+<table border="1">
+
+	<tr>
+		<td colspan="3">
+			<input type="text" id="it" value=""></div>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="button" value="1" class="btn"></td> <!--myclick(this)로 하면 function myclick(obj)로 해주면 됨  -->
+		<td><input type="button" value="2" class="btn"></td>
+		<td><input type="button" value="3" class="btn"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="4" class="btn"></td>
+		<td><input type="button" value="5" class="btn"></td>
+		<td><input type="button" value="6" class="btn"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" class="btn"></td>
+		<td><input type="button" value="8" class="btn"></td>
+		<td><input type="button" value="9" class="btn"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="0" class="btn"></td>
+		<td colspan="2">
+			<input type="button" value="CALL" id="myCall" class="myCall()"> 
+		</td>
+	</tr>
+</table>
+
+</body>
+
+
+</html>

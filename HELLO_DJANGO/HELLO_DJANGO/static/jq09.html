@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.4.js"></script>
+<style type="text/css">
+#it{
+	width: 30px;
+}
+#my_div{
+	height: 200px;
+}
+</style>
+<script src="jquery-3.6.4.js"></script>
+<script type="text/javascript">
+
+var arr1 = [1,2,3,4,5,6,7,8,9];
+	
+
+for(var i=0; i<10; i++){
+	var ran = parseInt(arr1.length*Math.random());
+	
+	var a = arr1[ran];
+	var b = arr1[0];
+	arr1[0] = a;
+	arr1[ran] = b;
+}
+	
+com = "" + arr1[0] + arr1[1] + arr1[2] ;
+
+console.log(com)
+
+function myclick(){
+	
+	var me = $("#it").val();
+
+	var m1 = me.substr(0,1); 
+	var m2 = me.substr(1,1); 
+	var m3 = me.substr(2,1); 
+
+	s = 0;
+	b = 0;
+	
+	if(com.substr(0,1)==m1) { s++;}
+	if(com.substr(1,1)==m2) { s++;}
+	if(com.substr(2,1)==m3) { s++;}
+	
+	if(me.substr(0,1) == com.substr(1,1) || 
+	   me.substr(0,1) == com.substr(2,1)) {b++;}  
+	if(me.substr(1,1) == com.substr(2,1) || 
+	   me.substr(1,1) == com.substr(0,1)) {b++;}  
+	if(me.substr(2,1) == com.substr(1,1) || 
+	   me.substr(2,1) == com.substr(0,1)) {b++;}  
+	
+	
+	var result = me + "\t" + s + "S" + b + "B" + "<br>";
+	
+	$("#my_div").append(result);
+
+	
+	if(s==3){
+		
+		setTimeout("alert('성공하였습니다')", 1000);
+	}
+}
+
+
+$(document).ready(function(){
+	$("#btn").on("click",myclick);
+})
+
+</script>
+</head>
+<body>
+<table border="1px">
+	<tr>
+		<td>야구 게임</td>
+		
+		<td>
+			<input type="text" id="it">
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+			<input type="button" value="맞추기" id="btn">
+		</td>
+	</tr> 
+	
+	<tr>
+		<td colspan="2">
+			<div id="my_div"> </div>
+		</td>
+	</tr> 	
+	
+</table>
+</body>
+
+
+</html>
